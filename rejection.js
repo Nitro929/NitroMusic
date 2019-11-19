@@ -4,4 +4,6 @@ process.on('unhandledRejection', error => {
   });
   new Promise((_, reject) => reject(new Error('woops')))
   .catch(error => { console.log('caught', err.message); });
+  new Promise((_, reject) => reject(new Error('woops')))
+.catch(new Function());
   

@@ -95,7 +95,7 @@ Please provide a value to select one of the search results ranging from 1-10.
 		serverQueue.songs = [];
 		serverQueue.connection.dispatcher.end('Stop command has been used!');
 		return undefined;
-	} else if (command === 'volume') {
+	} else if (command === 'vol') {
 		if (!msg.member.voiceChannel) return msg.channel.send('You are not in a voice channel!');
 		if (!serverQueue) return msg.channel.send('There is nothing playing.');
 		if (!args[1]) return msg.channel.send(`The current volume is: **${serverQueue.volume}**`);
